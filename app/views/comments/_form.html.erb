@@ -1,0 +1,15 @@
+<h3>Post a Comment</h3>
+
+<%= form_for [ @article, @comment ] do |f| %>
+  <p>
+    <%= f.label :author_name, "Your name" %><br/> <!--  To change the text that the label helper prints out, you pass in the desired text as a second parameter -->
+    <%= f.text_field :author_name %>
+  </p>
+  <p>
+    <%= f.label :body, "Your comment" %><br/>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
